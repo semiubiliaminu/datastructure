@@ -8,7 +8,7 @@ namespace DataStructure
         {
             // Console.WriteLine("Hello World!");
 
-            int[] numbers = { 1, 2, 3, 4, 5 };
+            int[] numbers = { 1,2,3,1,3,9,8};
             Console.WriteLine(centeredElement(numbers));
         }
 
@@ -18,50 +18,46 @@ namespace DataStructure
         */
        static int centeredElement(int[] number){
             //check the lenght of array
-            int size = number.Length;
+            int lenght = number.Length;
 
-            int result = 0;
+            int count_lowest_numbers = 0;
 
             int count_middle_element = 0;
-
-            if (size == 1)
-            { // only 1 element
-                return 1;
-            }
+            int middle_element = 0;
           
-            if (size > 1) // array element more than 1
+            if (lenght > 1 || lenght == 1) // array element more than 1 or equal to 1
             {
-                Console.WriteLine("We got here "+ size);
 
+                if (lenght == 1)
+                { // only 1 element
+                    Console.WriteLine("The length of the element in the array is old that is 1, therefore the Array is Centered. The result is 1 ");
+                    return 1;
+                }
 
-                if (size % 2 == 0)
-                { // number of elements in the aarray is even
-                    Console.WriteLine("We got second if  " + size);
+                if (lenght % 2 == 0)
+                { // number of elements in the array is even
+                    Console.WriteLine("The length of the element in the array is an even that is "+lenght +", therefore the Array is not Centered. The result is 0 ");
                     return 0;
-
                 }
                 else
                 {
-                    int middle_element = size % 2; // get the middle element
-                    for (int i = 0; i < size; i++)
+                    int whole_number =  lenght / 2; // get the interger part of the division 
+                    for (int i = 0; i < lenght; i++)
                     {
+                        middle_element = number[whole_number]; // get the element at the middle of the array
                         if (middle_element == number[i])
-                        { // middle element equal to any of the element break out of the loop and return 0
-
+                        { 
+                            // count how many times middle element equal to any of the element
                             count_middle_element++;
-                            if (count_middle_element > 1)
-                                return 0;
                         }
                         else
                         {
-                            if (middle_element < number[i])
+                           
+                            if (middle_element < number[i])  //middle number is less all other elements in the array
                             {
-                                result++;
+                                count_lowest_numbers++;
                             }
-                            else
-                            {
-                                return 0;
-                            }
+                            
                         }
                     }
                 }
@@ -71,12 +67,20 @@ namespace DataStructure
                 return 0;
             }
 
-            if (result == size) //size of element that are less than the middle number is equal to size of the array
-                Console.WriteLine("We got last if   " + result);
+            if(count_middle_element > 1) // check middle elemeent duplicates
+            {
+                Console.WriteLine("The array is not centered because the middle element " + middle_element + " is not strictly less than all other elements. The result is 0 ");
+                return 0;
+            }else if(count_lowest_numbers == lenght -1) //compare the number element less than middle elmenet with total number of elemen in the array minus 1
+            {
+                Console.WriteLine("The array is centered because the middle element " + middle_element + " is strictly less than all other elements. The result is 1 ");
+                // Console.WriteLine("Result  == " + count_lowest_numbers + "  compared to  " + lenght -1);
                 return 1;
+            }else{
+                Console.WriteLine("The array is not centered because the middle element " + middle_element + " is not strictly less than all other elements. The result is 0 ");
+                return 0;
+            }
             
-            Console.WriteLine("We got last if   " + result);
-            return 1;
         }
     }
 }
