@@ -8,8 +8,14 @@ namespace DataStructure
         {
             // Console.WriteLine("Hello World!");
 
-            int[] numbers = { 1,2,3,1,3,9,8};
+            int[] numbers = {3, 3, 4, 4};
             Console.WriteLine(centeredElement(numbers));
+
+            Console.WriteLine(sumOfOddAndEvenNumber(numbers));
+
+            char[] letters = { 'a', 'b', 'c' };
+            Console.WriteLine(lengthCharacter(letters,0,4));
+
         }
 
 
@@ -81,6 +87,60 @@ namespace DataStructure
                 return 0;
             }
             
+        }
+
+
+        static int sumOfOddAndEvenNumber(int[] numbers){
+            /**
+            Write a function that takes an array of integers as an argument and returns a value based on the sums of the even and odd numbers in the array. Let X = the sum of the odd numbers in the array and let Y = the sum of the even numbers. The function should return X – Y
+            */
+
+            int sum_odd_numbers = 0;  int sum_even_numbers = 0;
+            int length = numbers.Length;
+            int result = 0; 
+
+            for(int counter =0; counter < length; counter ++){
+                if (numbers[counter] % 2 == 0)
+                {
+                    //the number is even
+                    sum_even_numbers += numbers[counter];
+                }
+                else
+                {
+                    //the number is even
+                    sum_odd_numbers += numbers[counter];
+                }
+            }
+
+            result = sum_odd_numbers - sum_even_numbers;
+
+            Console.WriteLine("The result is: " + sum_odd_numbers + " - " + sum_even_numbers + " = " + result);
+            return result;
+            
+        }
+
+
+        static char[] lengthCharacter(char[] letters, int start, int len){
+
+            /*
+                Write a function that accepts a character array, a zero-based start position and a length. It should return a character array containing containing lengthcharacters starting with the startcharacter of the input array. The function should do error checking on the start position and the length and return null if the either value is not legal.
+                The function signature is:
+                char[ ] f(char[ ] a, int start, int len)
+            */
+
+            char[] result = { };
+            int lenght = letters.Length;
+            if((len - start) > lenght){
+                return null;
+            }else{
+
+                // foreach(char letter in letters){
+                //     result
+                // }
+                return letters;
+
+            }
+
         }
     }
 }
