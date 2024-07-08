@@ -1,0 +1,11 @@
+/Users/semiubiliaminu/my_folder/microclick/datastructure/bin/Debug/netcoreapp3.1/datastructure
+/Users/semiubiliaminu/my_folder/microclick/datastructure/bin/Debug/netcoreapp3.1/datastructure.deps.json
+/Users/semiubiliaminu/my_folder/microclick/datastructure/bin/Debug/netcoreapp3.1/datastructure.runtimeconfig.json
+/Users/semiubiliaminu/my_folder/microclick/datastructure/bin/Debug/netcoreapp3.1/datastructure.runtimeconfig.dev.json
+/Users/semiubiliaminu/my_folder/microclick/datastructure/bin/Debug/netcoreapp3.1/datastructure.dll
+/Users/semiubiliaminu/my_folder/microclick/datastructure/bin/Debug/netcoreapp3.1/datastructure.pdb
+/Users/semiubiliaminu/my_folder/microclick/datastructure/obj/Debug/netcoreapp3.1/datastructure.csprojAssemblyReference.cache
+/Users/semiubiliaminu/my_folder/microclick/datastructure/obj/Debug/netcoreapp3.1/datastructure.AssemblyInfoInputs.cache
+/Users/semiubiliaminu/my_folder/microclick/datastructure/obj/Debug/netcoreapp3.1/datastructure.AssemblyInfo.cs
+/Users/semiubiliaminu/my_folder/microclick/datastructure/obj/Debug/netcoreapp3.1/datastructure.dll
+/Users/semiubiliaminu/my_folder/microclick/datastructure/obj/Debug/netcoreapp3.1/datastructure.pdb
